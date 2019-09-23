@@ -1,6 +1,6 @@
 <label class="select-label" *ngIf="label" [ngClass]="{'hasError': (showError && errorMessage)}">{{ label }}</label>
 <div class="select-container">
-  <select class="select" [id]="id" (blur)="onTouch()" (input)="onChange($event.target.value)" [value]="value"
+  <select class="select" [id]="id" (blur)="onTouch()" [value]="value"
     [formControl]="formControl?.control" [ngClass]="{'hasError': (showError && errorMessage)}">
     <option value="">Seleccionar</option>
     <option *ngFor="let option of options" [value]="option.id">{{ option.name }}</option>
